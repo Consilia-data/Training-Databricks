@@ -49,6 +49,7 @@ def songs_raw():
 @dlt.table(
   comment="Million Song Dataset with data cleaned and prepared for analysis."
 )
+#mécanisme de validation de qualité de données
 @dlt.expect("valid_artist_name", "artist_name IS NOT NULL")
 @dlt.expect("valid_title", "song_title IS NOT NULL")
 @dlt.expect("valid_duration", "duration > 0")
